@@ -29,7 +29,7 @@
         <field name="model">hr.employee</field>
         <field name="inherit_id" ref="hr.hr_kanban_view_employees"/>
         <field name="arch" type="xml">
-            <xpath expr="//strong[hasclass('o_kanban_record_title')]/field[@name='name']" position="replace">
+            <xpath expr="//main[hasclass('ms-2')]/div/field[@name='name']" position="replace">
                 <field name="full_name" placeholder="Employee's Name"/>
             </xpath>
         </field>
@@ -40,7 +40,7 @@
         <field name="model">hr.employee</field>
         <field name="inherit_id" ref="hr.view_employee_tree"/>
         <field name="arch" type="xml">
-            <xpath expr="//tree/field[@name='name']" position="replace">
+            <xpath expr="//list/field[@name='name']" position="replace">
                 <field name="full_name" readonly="1"/>
             </xpath>
         </field>
