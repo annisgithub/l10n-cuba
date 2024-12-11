@@ -1,0 +1,108 @@
+<odoo>
+    <data>
+        <record id="hr_payroll_employee_tree" model="ir.ui.view">
+            <field name="name">hr.payroll.employee.tree</field>
+            <field name="model">payroll.movement</field>
+            <field name="arch" type="xml">
+                <tree name="payroll_movement" string="Payroll Movement">
+                    <field name="employee_id"/>
+                    <field name="contract_id"/>
+                    <field name="effective_date"/>
+                    <field name="actual_situation_id"/>
+                    <field name="state"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="hr_payroll_employee_form" model="ir.ui.view">
+            <field name="name">hr.payroll.employee.form</field>
+            <field name="model">payroll.movement</field>
+            <field name="arch" type="xml">
+                <form name="payroll_movement" string="Payroll Movement" create="false">
+                    <header>
+<!--                        <button name="action_confirm" string="Confirm" type="object" class="oe_highlight"-->
+<!--                                attrs="{'invisible': [('state', '=', 'open')]}"/>-->
+
+<!--                        <button name="print_approve_movement" string="Imprimir modelo SC-4-02" type="object"-->
+<!--                                class="oe_highlight"-->
+<!--                                attrs="{'invisible': [('state', '!=', 'open')]}"/>-->
+                        <field name="state" widget="statusbar" readonly="1"/>
+                    </header>
+                    <sheet>
+                        <field name="company_id" invisible="1"/>
+                        <div class="oe_title pr-0" name="title">
+                            <h1 class="d-flex flex-row justify-content-between">
+                                <field name="employee_id" class="text-truncate" placeholder="Employee name"
+                                       readonly="state != 'draft'" options="{'no_create': True}"/>
+                            </h1>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="contract_id" readonly="state != 'draft'"
+                                       options="{'no_create': True}" placeholder="Contract"/>
+                            </group>
+
+                            <group>
+                                <field name="create_date" readonly="state != 'draft'"/>
+                                <field name="effective_date" readonly="state != 'draft'"/>
+                            </group>
+                        </group>
+                        <group>
+
+                            <group name="actual" string="Actual Situation">
+                                <field name="actual_situation_id"
+                                       readonly="state != 'draft'"/>
+                                <field name="actual_department_id"
+                                       readonly="state != 'draft'"
+                                       options="{'no_create': True}"/>
+                                <field name="actual_resource_calendar_id" options="{'no_create': True}"
+                                       readonly="state != 'draft'"/>
+                                <field name="actual_occupational_category_id"
+                                       readonly="state != 'draft'"
+                                       options="{'no_create': True}"/>
+                                <field name="actual_wage" options="{'no_create': True}"
+                                       readonly="state != 'draft'"
+                                />
+                            </group>
+
+                            <group name="new" string="New Situation">
+                                <field name="new_situation_id"
+                                       readonly="state != 'draft'"/>
+                                <field name="new_department_id" options="{'no_create': True}"
+                                       readonly="state != 'draft'"/>
+                                <field name="new_resource_calendar_id" options="{'no_create': True}"
+                                       readonly="state != 'draft'"/>
+                                <field name="new_occupational_category_id" options="{'no_create': True}"
+                                       readonly="state != 'draft'"/>
+                                <field name="new_wage" options="{'no_create': True}"
+                                       readonly="state != 'draft'"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_hr_payroll" model="ir.actions.act_window">
+            <field name="name">Payroll Movements</field>
+            <field name="res_model">payroll.movement</field>
+            <field name="view_mode">tree,form</field>
+                    <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                No Movement found ! Let's create one
+            </p>
+            <p>
+                Use Movement to categorize your Employees.
+            </p>
+        </field>
+        </record>
+
+        <menuitem
+            id="hr_menu_hr_payroll"
+            name="Payroll Movements"
+            action="action_hr_payroll"
+            parent="hr.menu_hr_employee_payroll"
+            sequence="8"
+            groups="hr_contract.group_hr_contract_manager"/>
+    </data>
+</odoo>

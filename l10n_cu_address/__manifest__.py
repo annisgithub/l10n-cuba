@@ -21,6 +21,7 @@
         'data/res_municipality_data.xml',
         'views/res_municipality_views.xml',
         'views/res_partner_views.xml',
+        'views/hr_employee_views.xml',
         'security/ir.model.access.csv',
     ],
     'demo': [

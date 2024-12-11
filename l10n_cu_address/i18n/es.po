@@ -1,0 +1,147 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* l10n_cu_address
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-12-26 14:37+0000\n"
+"PO-Revision-Date: 2021-12-26 09:38-0500\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: es\n"
+"X-Generator: Poedit 2.3\n"
+
+
+#. module: l10n_cu_address
+#: model:ir.model.fields,field_description:l10n_cu_address.field_hr_employee__personal_street
+msgid "Personal Street"
+msgstr "Calle"
+
+#. module: l10n_cu_address
+#: model:ir.model.fields,field_description:l10n_cu_address.field_hr_employee__personal_street2
+msgid "Personal Street2"
+msgstr "Calle 2"
+
+#. module: l10n_cu_address
+#: model:ir.model.fields,field_description:l10n_cu_address.field_hr_employee__personal_city
+msgid "Personal City"
+msgstr "Ciudad"
+
+#. module: l10n_cu_address
+#: model:ir.model.fields,field_description:l10n_cu_address.field_hr_employee__personal_state_id
+msgid "Personal State"
+msgstr "Estado"
+
+#. module: l10n_cu_address
+#: model:ir.model.fields,field_description:l10n_cu_address.field_hr_employee__personal_zip
+msgid "Personal Zip"
+msgstr "C.P."
+
+#. module: l10n_cu_address
+#: model:ir.model.fields,field_description:l10n_cu_address.field_hr_employee__personal_country_id
+msgid "Personal Country"
+msgstr "País"
+
+
+#. module: l10n_cu_address
+#: model:ir.model.fields,field_description:l10n_cu_address.field_hr_employee__personal_phone
+msgid "Private Phone"
+msgstr "Teléfono"
+
+
+#. module: l10n_cu_address
+#: model:ir.model.fields,field_description:l10n_cu_address.field_hr_employee__personal_email
+msgid "Private Email"
+msgstr "Correo electrónico"
+
+
+#. module: l10n_cu_address
+#: model:ir.model.fields,field_description:l10n_cu_address.field_hr_employee__res_personal_municipality_id
+msgid "Personal Municipality"
+msgstr "Municipios"
+
+
+#. module: l10n_cu_address
+#: model:ir.model.fields,field_description:l10n_cu_address.field_hr_employee__res_private_municipality_id
+msgid "Private Municipality"
+msgstr "Municipios"
+
+
+#. module: l10n_cu_address
+#: model_terms:ir.ui.view,arch_db:l10n_cu_address.view_form_address_employee_inherited
+msgid "Personal Contact"
+msgstr "Dirección Personal"
+
+
+#. module: l10n_cu_address
+#: model_terms:ir.ui.view,arch_db:l10n_cu_address.view_form_address_employee_inherited
+msgid "Street..."
+msgstr "Calle..."
+
+#. module: l10n_cu_address
+#: model_terms:ir.ui.view,arch_db:l10n_cu_address.view_form_address_employee_inherited
+msgid "Street 2..."
+msgstr "Calle 2..."
+
+
+#. module: l10n_cu_address
+#: model_terms:ir.ui.view,arch_db:l10n_cu_address.view_form_address_employee_inherited
+msgid "Municipality..."
+msgstr "Municipio..."
+
+#. module: l10n_cu_address
+#: model_terms:ir.ui.view,arch_db:l10n_cu_address.view_form_address_employee_inherited
+msgid "Country"
+msgstr "País"
+
+#. module: l10n_cu_address
+#: model_terms:ir.ui.view,arch_db:l10n_cu_address.view_form_address_employee_inherited
+msgid "State"
+msgstr "Provincia"
+
+
+#. module: l10n_cu_address
+#: model_terms:ir.ui.view,arch_db:l10n_cu_address.view_form_address_employee_inherited
+msgid "ZIP"
+msgstr "C.P."
+
+#. module: l10n_cu_address
+#: model_terms:ir.ui.view,arch_db:l10n_cu_address.view_form_address_employee_inherited
+msgid "City"
+msgstr "Ciudad"
+
+
+#. module: l10n_cu_address
+#: model_terms:ir.ui.view,arch_db:l10n_cu_address.view_form_address_employee_inherited
+msgid "Personal Information"
+msgstr "Contacto personal"
+
+
+#. module: l10n_cu_address
+#: model:ir.model.fields,field_description:l10n_cu_address.field_hr_employee__last_name
+msgid "First name"
+msgstr "Primer Apellido"
+
+#. module: l10n_cu_address
+#: model:ir.model.fields,field_description:l10n_cu_address.field_hr_employee__second_last_name
+msgid "Second name"
+msgstr "Segundo Apellido"
+
+
+#. module: l10n_cu_address
+#: model_terms:ir.ui.view,arch_db:l10n_cu_address.view_form_address_employee_inherited
+msgid "First name"
+msgstr "Primer Apellido"
+
+#. module: l10n_cu_address
+#: model_terms:ir.ui.view,arch_db:l10n_cu_address.view_form_address_employee_inherited
+msgid "Second name"
+msgstr "Segundo Apellido"
+
+

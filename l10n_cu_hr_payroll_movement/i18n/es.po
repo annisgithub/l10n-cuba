@@ -1,0 +1,160 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* l10n_cu_hr_payroll_movement
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-12-26 14:37+0000\n"
+"PO-Revision-Date: 2021-12-26 09:38-0500\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: es\n"
+"X-Generator: Poedit 2.3\n"
+
+
+
+#. module: l10n_cu_hr_payroll_movement
+#: model:ir.model.fields,field_description:l10n_cu_hr_payroll_movement.field_payroll_movement__effective_date
+msgid "Effective Date"
+msgstr "Fecha Efectiva"
+
+#. module: l10n_cu_hr_payroll_movement
+#: model:ir.model.fields,field_description:l10n_cu_hr_payroll_movement.field_payroll_movement__create_date
+msgid "Created on"
+msgstr "Fecha"
+
+#. module: l10n_cu_hr_payroll_movement
+#: model:ir.model.fields,field_description:l10n_cu_hr_payroll_movement.field_payroll_movement__employee_id
+msgid "Employee"
+msgstr "Empleado"
+
+#. module: l10n_cu_hr_payroll_movement
+#: model:ir.model.fields,field_description:l10n_cu_hr_payroll_movement.field_payroll_movement__contract_id
+msgid "Contract Reference"
+msgstr "Contrato"
+
+#. module: l10n_cu_hr_payroll_movement
+#: model:ir.model.fields,field_description:l10n_cu_hr_payroll_movement.field_payroll_movement__state
+msgid "State"
+msgstr "Estado"
+
+#. module: l10n_cu_hr_payroll_movement
+#: code:addons/co_rr_hh/models/payroll_movement.py:0
+#: model:ir.model.fields.selection,name:l10n_cu_hr_payroll_movement.selection__payroll_movement__state__draft
+#, python-format
+msgid "New"
+msgstr "Nuevo"
+
+#. module: l10n_cu_hr_payroll_movement
+#: code:addons/co_rr_hh/models/payroll_movement.py:0
+#: model:ir.model.fields.selection,name:l10n_cu_hr_payroll_movement.selection__payroll_movement__state__open
+#, python-format
+msgid "Open"
+msgstr "Aprobado"
+
+#. module: l10n_cu_hr_payroll_movement
+#: model:ir.model.fields,field_description:l10n_cu_hr_payroll_movement.field_payroll_movement__company_id
+msgid "Company"
+msgstr "Compañía"
+
+#. module: l10n_cu_hr_payroll_movement
+#: model:ir.model.fields,field_description:l10n_cu_hr_payroll_movement.field_payroll_movement__actual_wage
+msgid "Basic Salary"
+msgstr "Salario"
+
+#. module: l10n_cu_hr_payroll_movement
+#: model:ir.model.fields,field_description:l10n_cu_hr_payroll_movement.field_payroll_movement__actual_situation_id
+msgid "Job Name"
+msgstr "Cargo"
+
+#. module: l10n_cu_hr_payroll_movement
+#: model:ir.model.fields,field_description:l10n_cu_hr_payroll_movement.field_payroll_movement__actual_occupational_category_id
+msgid "Occupational Category"
+msgstr "Categoría Ocupacional"
+
+#. module: l10n_cu_hr_payroll_movement
+#: model:ir.model.fields,field_description:l10n_cu_hr_payroll_movement.field_payroll_movement__actual_department_id
+msgid "Work Area"
+msgstr "Área de Trabajo"
+
+#. module: l10n_cu_hr_payroll_movement
+#: model:ir.model.fields,field_description:l10n_cu_hr_payroll_movement.field_payroll_movement__actual_resource_calendar_id
+msgid "Working Hours"
+msgstr "Horario Laboral"
+
+
+#. module: l10n_cu_hr_payroll_movement
+#: model:ir.model.fields,field_description:l10n_cu_hr_payroll_movement.field_payroll_movement__new_wage
+msgid "New Salary"
+msgstr "Nuevo Salario"
+
+#. module: l10n_cu_hr_payroll_movement
+#: model:ir.model.fields,field_description:l10n_cu_hr_payroll_movement.field_payroll_movement__new_situation_id
+msgid "New Job"
+msgstr "Nuevo Cargo"
+
+#. module: l10n_cu_hr_payroll_movement
+#: model:ir.model.fields,field_description:l10n_cu_hr_payroll_movement.field_payroll_movement__new_occupational_category_id
+msgid "New Occupational Category"
+msgstr "Nueva Categoría Ocupacional"
+
+#. module: l10n_cu_hr_payroll_movement
+#: model:ir.model.fields,field_description:l10n_cu_hr_payroll_movement.field_payroll_movement__new_department_id
+msgid "New Work Area"
+msgstr "Nueva Área de Trabajo"
+
+#. module: l10n_cu_hr_payroll_movement
+#: model:ir.model.fields,field_description:l10n_cu_hr_payroll_movement.field_payroll_movement__new_resource_calendar_id
+msgid "New Working Hours"
+msgstr "Nueva Horario Laboral"
+
+#. module: l10n_cu_hr_payroll_movement
+#: model:ir.ui.menu,name:l10n_cu_hr_payroll_movement.hr_menu_hr_payroll
+#: model:ir.actions.act_window,name:l10n_cu_hr_payroll_movement.open_occupational_category_action
+msgid "Payroll Movements"
+msgstr "Movimiento de Nómina
+
+#. module: l10n_cu_hr_payroll_movement
+#: model_terms:ir.actions.act_window,help:l10n_cu_hr_payroll_movement.open_occupational_category_action
+msgid "Use Movement to categorize your Employees."
+msgstr "Utilice Movimientos de Nómina para clasificar a sus empleados."
+
+
+#. module: l10n_cu_hr_payroll_movement
+#: model_terms:ir.actions.act_window,help:l10n_cu_hr_payroll_movement.open_occupational_category_action
+msgid "No Movement found ! Let's create one"
+msgstr "No se Encontraron Movimientos de Nómina. ¡Creemos una!"
+
+
+#. module: l10n_cu_hr_payroll_movement
+#: model_terms:ir.ui.view,arch_db:l10n_cu_hr_payroll_movement.hr_payroll_employee_form
+msgid "Actual Situation"
+msgstr "Situación Actual"
+
+#. module: l10n_cu_hr_payroll_movement
+#: model_terms:ir.ui.view,arch_db:l10n_cu_hr_payroll_movement.hr_payroll_employee_form
+msgid "New Situation"
+msgstr "Nueva Situación"
+
+#. module: l10n_cu_hr_payroll_movement
+#: model_terms:ir.ui.view,arch_db:l10n_cu_hr_payroll_movement.hr_payroll_employee_form
+msgid "Employee name"
+msgstr "Empleado"
+
+#. module: l10n_cu_hr_payroll_movement
+#: model_terms:ir.ui.view,arch_db:l10n_cu_hr_payroll_movement.hr_payroll_employee_form
+msgid "Contract"
+msgstr "Contrato"
+
+
+#. module: l10n_cu_hr_payroll_movement
+#: model:ir.model,name:l10n_cu_hr_payroll_movement.model_payroll_movement
+msgid "Payroll Movement"
+msgstr "Movimiento de Nómina"
+

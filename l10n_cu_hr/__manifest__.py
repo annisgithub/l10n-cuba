@@ -14,7 +14,13 @@
      'data': [
           "data/hr_data.xml",
           "data/resource_data.xml",
+          "data/schooling_level_data.xml",
+          "data/occupational_category_data.xml",
           "views/assistance_cards_template.xml",
+          "views/schooling_level_views.xml",
+          "views/profession_views.xml",
+          "views/occupational_category_views.xml",
+          "views/hr_employee_views.xml",
           "reports/report_assistance_cards.xml",
           "wizards/assistance_cards_wizard.xml",
           "security/ir.model.access.csv"
