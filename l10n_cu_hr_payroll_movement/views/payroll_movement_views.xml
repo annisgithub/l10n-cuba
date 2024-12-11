@@ -4,13 +4,13 @@
             <field name="name">hr.payroll.employee.tree</field>
             <field name="model">payroll.movement</field>
             <field name="arch" type="xml">
-                <tree name="payroll_movement" string="Payroll Movement">
+                <list name="payroll_movement" string="Payroll Movement">
                     <field name="employee_id"/>
                     <field name="contract_id"/>
                     <field name="effective_date"/>
                     <field name="actual_situation_id"/>
                     <field name="state"/>
-                </tree>
+                </list>
             </field>
         </record>
 
@@ -86,7 +86,7 @@
         <record id="action_hr_payroll" model="ir.actions.act_window">
             <field name="name">Payroll Movements</field>
             <field name="res_model">payroll.movement</field>
-            <field name="view_mode">tree,form</field>
+            <field name="view_mode">list,form</field>
                     <field name="help" type="html">
             <p class="o_view_nocontent_smiling_face">
                 No Movement found ! Let's create one

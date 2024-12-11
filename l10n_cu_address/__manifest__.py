@@ -13,7 +13,8 @@
     "category": "Localization",
     "depends" : [
         'base',
-        'contacts'
+        'contacts',
+        'hr'
     ],
     "license": "AGPL-3",
     "data" : [
