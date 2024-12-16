@@ -22,7 +22,7 @@ class HrContract(models.Model):
 
     wage = fields.Monetary('Wage', required=True, compute="_compute_employee_contract",
                            tracking=True, help="Employee's monthly gross wage.",
-                           aggregator="avg", store=True)
+                           group_operator="avg", store=True)
 
     determined_contract_type_id = fields.Many2one('determined.contract.type', string='Determined Contract Type',
                                                   ondelete='restrict',check_company=True)
