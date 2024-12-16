@@ -48,7 +48,7 @@ class HrContract(models.Model):
                 raise ValidationError("The basic salary must be greater than 0.00.")
 
     @api.model
-    def _expand_contract_states(self, states, domain, order):
+    def _expand_contract_states(self, resources, domain):
         return [key for key, val in type(self).contract_state.selection]
 
     @api.depends('date_start', 'number_of_days', 'contract_type')
