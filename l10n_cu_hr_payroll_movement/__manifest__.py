@@ -9,11 +9,12 @@
         Empleados, Movimientos de Nómina.
      """,
      'author': 'Comunidad Cubana de Odoo',
-     'depends': ["hr","hr_contract","l10n_cu_address","l10n_cu_hr"],
+     'depends': ["hr","l10n_cu_hr_employee_contract","l10n_cu_address","l10n_cu_hr"],
      'auto_install': True,     
      'data': [
           "views/payroll_movement_views.xml",
           "security/ir.model.access.csv"
      ],
      'license': 'LGPL-3',
+
 }

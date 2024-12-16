@@ -15,7 +15,7 @@
      </record>
 
      <record id="view_profession_list" model="ir.ui.view">
-        <field name="name">hr.schooling.leve.list</field>
+        <field name="name">hr.profession.list</field>
         <field name="model">profession</field>
         <field eval="8" name="priority"/>
         <field name="arch" type="xml">
