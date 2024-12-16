@@ -19,16 +19,16 @@
         <field name="model">determined.contract.type</field>
         <field eval="8" name="priority"/>
         <field name="arch" type="xml">
-            <tree string="Determined Contract Type" editable="bottom">
+            <list string="Determined Contract Type" editable="bottom">
                 <field name="name"/>
-            </tree>
+            </list>
         </field>
      </record>
 
      <record id="open_determined_contract_type_action" model="ir.actions.act_window">
         <field name="name">Determined Contract Type</field>
         <field name="res_model">determined.contract.type</field>
-        <field name="view_mode">tree,form</field>
+        <field name="view_mode">list,form</field>
         <field name="help" type="html">
             <p class="o_view_nocontent_smiling_face">
                 No Determined Contract Type found ! Let's create one
