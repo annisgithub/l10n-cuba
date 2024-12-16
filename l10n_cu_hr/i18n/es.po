@@ -41,8 +41,15 @@ msgstr "Primer Apellido"
 
 #. module: l10n_cu_hr
 #: model_terms:ir.ui.view,arch_db:l10n_cu_hr.view_form_hr_employee_inherited
+msgid "Others"
+msgstr "Otros"
+
+
+#. module: l10n_cu_hr
+#: model_terms:ir.ui.view,arch_db:l10n_cu_hr.view_form_hr_employee_inherited
 msgid "Second name"
 msgstr "Segundo Apellido"
+
 
 #. module: l10n_cu_hr
 #: model_terms:ir.ui.view,arch_db:l10n_cu_hr.view_kanban_hr_employee_inherited
@@ -68,7 +75,7 @@ msgstr "Nivel Escolar"
 #. module: l10n_cu_hr
 #: model:ir.model.fields,field_description:l10n_cu_hr.field_hr_employee__schooling_level_id
 msgid "Schooling Level"
-msgstr "Nivel de Escolaridad"
+msgstr "Nivel de escolaridad"
 
 
 #. module: l10n_cu_hr
@@ -112,7 +119,7 @@ msgstr "Código"
 #. module: l10n_cu_hr
 #: model:ir.model.fields,field_description:l10n_cu_hr.field_hr_employee__occupational_category_id
 msgid "Occupational Category"
-msgstr "Categoría Ocupacional"
+msgstr "Categoría ocupacional"
 
 
 #. module: l10n_cu_hr
@@ -149,6 +156,43 @@ msgstr "Descripción"
 #: model:ir.model.fields,field_description:l10n_cu_hr.field_hr_employee__profession_id
 msgid "Profession"
 msgstr "Profesión"
+
+#. module: l10n_cu_hr
+#: model:ir.model.fields,field_description:l10n_cu_hr.field_hr_employee__skin_color
+msgid "Skin Color"
+msgstr "Color de la Piel"
+
+
+#. module: l10n_cu_hr
+#: model:ir.model.fields.selection,name:l10n_cu_hr.selection__hr_employee__skin_color__white
+msgid "White"
+msgstr "Blanca"
+
+#. module: l10n_cu_hr
+#: model:ir.model.fields.selection,name:l10n_cu_hr.selection__hr_employee__skin_color__mixed
+msgid "Mixed"
+msgstr "Mestiza"
+
+#. module: l10n_cu_hr
+#: model:ir.model.fields.selection,name:l10n_cu_hr.selection__hr_employee__skin_color__black
+msgid "Black"
+msgstr "Negra"
+
+#. module: l10n_cu_hr
+#: model:ir.model.fields,help:l10n_cu_hr.field_hr_employee__skin_color
+msgid "Color of the skin employee"
+msgstr "Color de la piel del empleado"
+
+
+#. module: l10n_cu_hr
+#: model:ir.model.fields,help:l10n_cu_hr.field_hr_employee__political_affiliation
+msgid "Political affiliation of employee"
+msgstr "Afiliación política del empleado"
+
+#. module: l10n_cu_hr
+#: model:ir.model.fields,field_description:l10n_cu_hr.field_hr_employee__political_affiliation
+msgid "Political Affiliation"
+msgstr "Afiliación Política"
 
 
 #. module: l10n_cu_hr

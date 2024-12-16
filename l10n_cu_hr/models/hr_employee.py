@@ -17,6 +17,17 @@ class HrEmployee(models.Model):
     profession_id = fields.Many2one('profession', string='Profession', ondelete='restrict',check_company=True)
 
 
+    skin_color = fields.Selection([
+        ('white', 'White'),
+        ('mixed', 'Mixed'),
+        ('black', 'Black')
+    ], string='Skin Color',help='Color of the skin employee', default='mixed')
+
+    political_affiliation = fields.Selection([
+        ('pcc', 'PCC'),
+        ('ujc', 'UJC')
+    ], string='Political Affiliation',help='Political affiliation of employee', default='ujc')
+
     @api.depends('name', 'last_name', 'second_last_name')
     def _compute_full_name(self):
         for record in self:
