@@ -100,6 +100,11 @@ msgstr "Nuevo"
 msgid "Status"
 msgstr "Estado"
 
+#. module: l10n_cu_hr_employee_contract
+#: model:ir.model.fields,field_description:l10n_cu_hr_employee_contract.field_hr_contract__number_of_days
+msgid "Number of days"
+msgstr "Cantidad de dias"
+
 
 #. module: l10n_cu_hr_employee_contract
 #: model:ir.model.fields,help:l10n_cu_hr_employee_contract.field_hr_contract__contract_state
@@ -142,5 +147,68 @@ msgid "Name"
 msgstr "Descripción"
 
 
+#. module: l10n_cu_hr_employee_contract
+#: model:ir.model.fields,field_description:l10n_cu_hr_employee_contract.field_hr_job__designation
+msgid "Designation"
+msgstr "Designado"
 
+
+#. module: l10n_cu_hr_employee_contract
+#: model:ir.model.fields,field_description:l10n_cu_hr_employee_contract.field_hr_job__occupational_category_id
+msgid "Occupational Category"
+msgstr "Categoría ocupacional"
+
+
+#. module: l10n_cu_hr_employee_contract
+#: model:ir.model.fields,field_description:l10n_cu_hr_employee_contract.field_hr_job__wage
+#: model:ir.model.fields,field_description:l10n_cu_hr_employee_contract.field_hr_employee__wage
+#: model:ir.model.fields,field_description:l10n_cu_hr_employee_contract.field_hr_contract__wage
+msgid "Wage"
+msgstr "Salario básico"
+
+#. module: l10n_cu_hr_employee_contract
+#: model:ir.model.fields,help:l10n_cu_hr_employee_contract.field_hr_job__wage
+#: model:ir.model.fields,help:l10n_cu_hr_employee_contract.field_hr_employee__wage
+#: model:ir.model.fields,help:l10n_cu_hr_employee_contract.field_hr_contract__wage
+msgid "Employee's monthly gross wage."
+msgstr "Salario bruto mensual por empleado."
+
+
+#. module: l10n_cu_hr_employee_contract
+#: model:ir.model.fields,field_description:l10n_cu_hr_employee_contract.field_hr_employee__occupational_category_id
+msgid "Occupational Category"
+msgstr "Categoría ocupacional"
+
+#. module: l10n_cu_hr_employee_contract
+#: model_terms:ir.ui.view,arch_db:l10n_cu_hr_employee_contract.view_form_hr_job_inherited
+msgid "Contract"
+msgstr "Contrato"
+
+#. module: l10n_cu_hr_employee_contract
+#: model_terms:ir.ui.view,arch_db:l10n_cu_hr_employee_contract.view_form_hr_contract_employee_inherited
+msgid "Others"
+msgstr "Contrato"
+
+
+#. module: l10n_cu_hr_employee_contract
+#. odoo-python
+#: code:addons/l10n_cu_hr_employee_contract/models/hr_employee.py:0
+#, python-format
+msgid "The basic salary must be greater than 0.00."
+msgstr "El salario básico no puede ser menor o igual a 0.00"
+
+
+#. module: l10n_cu_hr_employee_contract
+#. odoo-python
+#: code:addons/l10n_cu_hr_employee_contract/models/hr_job.py:0
+#, python-format
+msgid "The basic salary must be greater than 0.00."
+msgstr "El salario básico no puede ser menor o igual a 0.00"
+
+#. module: l10n_cu_hr_employee_contract
+#. odoo-python
+#: code:addons/l10n_cu_hr_employee_contract/models/hr_contract.py:0
+#, python-format
+msgid "The basic salary must be greater than 0.00."
+msgstr "El salario básico no puede ser menor o igual a 0.00"
 

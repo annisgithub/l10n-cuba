@@ -14,6 +14,8 @@
      'auto_install': True,
      'data': [
           "views/determined_contract_type_views.xml",
+          "views/hr_job_views.xml",
+          "views/hr_employee_views.xml",
           "views/hr_contract_views.xml",
           "data/determinate_contract_type_data.xml",
           "data/sequence_data.xml",

@@ -22,6 +22,17 @@
             <xpath expr="//field[@name='schooling_level_id']" position="after">
                     <field name="occupational_category_id"/>
              </xpath>
+            <xpath expr="//field[@name='identification_id']" position="after">
+                    <field name="skin_color"/>
+             </xpath>
+            <xpath expr="//page[@name='hr_settings']" position="after">
+                <page name="others" string="Others" groups="hr.group_hr_user">
+                    <group>
+                        <field name="political_affiliation"/>
+                    </group>
+                </page>
+
+             </xpath>
         </field>
     </record>
     <record id="view_kanban_hr_employee_inherited" model="ir.ui.view">

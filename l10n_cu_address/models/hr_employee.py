@@ -22,3 +22,13 @@ class HrEmployee(models.Model):
     personal_email = fields.Char(string="Personal Email", groups="hr.group_hr_user")
     res_personal_municipality_id = fields.Many2one('res.municipality', 'Personal Municipality',
                                               domain="[('state_id', '=', personal_state_id)]", help="Mucipality of Cuba")
+
+    state_of_birth_id = fields.Many2one(
+        "res.country.state", string="State of Birth",
+        domain="[('country_id', '=?', country_of_birth)]",
+        groups="hr.group_hr_user")
+
+    municipality_of_birth_id = fields.Many2one(
+        'res.municipality', string='Municipality of birth',
+        domain="[('state_id', '=', state_of_birth_id)]",
+        groups="hr.group_hr_user")
