@@ -1,0 +1,55 @@
+<odoo>
+    <record id="hr_contract_view_form_inherit" model="ir.ui.view">
+        <field name="name">hr.contract.view.form.inherit</field>
+        <field name="model">hr.contract</field>
+        <field name="inherit_id" ref="hr_contract.hr_contract_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//header/field[@name='state']" position="replace"/>
+            <xpath expr="//header/field[@name='state']" position="replace">
+                <field name="contract_state" groups="!hr_contract.group_hr_contract_manager" widget="statusbar"/>
+                <field name="contract_state" groups="hr_contract.group_hr_contract_manager" widget="statusbar"/>
+            </xpath>
+            <xpath expr="//group[@name='top_info_right']/field[@name='contract_type_id'][@groups='hr_contract.group_hr_contract_manager']" position="after">
+                <field name="contract_type"/>
+                <field name="determined_contract_type_id" invisible="contract_type != 'determinado'" required="contract_type == 'determinado'"
+                       groups="!hr_contract.group_hr_contract_manager" options="{'no_open': True, 'no_create': True}"/>
+                <field name="determined_contract_type_id" invisible="contract_type != 'determinado'" required="contract_type == 'determinado'"
+                       groups="hr_contract.group_hr_contract_manager"/>
+            </xpath>
+            <xpath expr="//group[@name='top_info_right']/field[@name='contract_type_id']" position="replace">
+
+            </xpath>
+            <xpath expr="//group[@name='top_info_right']/field[@name='contract_type_id']" position="replace">
+
+            </xpath>
+
+            <xpath expr="//group[@name='top_info_left']/field[@name='date_start']" position="after">
+                <field name="number_of_days" invisible="contract_type != 'determinado'"/>
+            </xpath>
+
+            <xpath expr="//group[@name='top_info_left']/field[@name='date_end']" position="replace">
+                <field name="date_end" invisible="contract_type != 'determinado'" required="contract_type == 'determinado'" string="Contract End Date" readonly="1"/>
+            </xpath>
+       </field>
+    </record>
+    <record id="hr_contract_view_search_inherit" model="ir.ui.view">
+        <field name="name">hr.contract.view.search.inherit</field>
+        <field name="model">hr.contract</field>
+        <field name="inherit_id" ref="hr_contract.hr_contract_view_search"/>
+        <field name="arch" type="xml">
+            <xpath expr="//filter[@name='group_by_state']" position="replace">
+               <filter string="Status" name="group_by_state" domain="[]" context="{'group_by': 'contract_state'}"/>
+            </xpath>
+       </field>
+    </record>
+    <record id="hr_contract_view_list_inherit" model="ir.ui.view">
+        <field name="name">hr.contract.view.list.inherit</field>
+        <field name="model">hr.contract</field>
+        <field name="inherit_id" ref="hr_contract.hr_contract_view_tree"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='state']" position="replace">
+                <field name="contract_state" widget="badge" decoration-info="contract_state == 'draft'" decoration-warning="contract_state == 'close'" decoration-success="contract_state == 'open'"/>
+            </xpath>
+       </field>
+    </record>
+</odoo>

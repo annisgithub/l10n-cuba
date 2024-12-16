@@ -1,0 +1,146 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* l10n_cu_hr_employee_contract
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-12-26 14:37+0000\n"
+"PO-Revision-Date: 2021-12-26 09:38-0500\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: es\n"
+"X-Generator: Poedit 2.3\n"
+
+
+#. module: l10n_cu_hr_employee_contract
+#: model:ir.model.fields,field_description:l10n_cu_hr_employee_contract.field_hr_contract__contract_type
+msgid "Contract Type"
+msgstr "Tipo de Contrato"
+
+
+#. module: l10n_cu_hr_employee_contract
+#: model:ir.model.fields,field_description:l10n_cu_hr_employee_contract.field_hr_contract__contract_type_id
+msgid "Other Contract Type"
+msgstr "Tipo de Empleado"
+
+
+#. module: l10n_cu_hr_employee_contract
+#: model:ir.model.fields,field_description:l10n_cu_hr_employee_contract.field_hr_contract__determined_contract_type_id
+msgid "Determined Contract Type"
+msgstr "Tipo de Contrato Determinado"
+
+#. module: l10n_cu_hr_employee_contract
+#: model:ir.model.fields,field_description:l10n_cu_hr_employee_contract.field_hr_contract__name
+msgid "Contract Reference"
+msgstr "Referencia del Contrato"
+
+
+
+#. module: l10n_cu_hr_employee_contract
+#: model:ir.model.fields,field_description:l10n_cu_hr_employee_contract.field_hr_job__designation
+msgid "Designation"
+msgstr "Designado"
+
+
+#. module: l10n_cu_hr_employee_contract
+#: model_terms:ir.ui.view,arch_db:l10n_cu_hr_employee_contract.hr_contract_view_form_inherit
+msgid "Contract End Date"
+msgstr "Fecha de finalización del contrato"
+
+
+#. module: l10n_cu_hr_employee_contract
+#. odoo-python
+#: code:addons/l10n_cu_hr_employee_contract/models/hr_contract.py:0
+#: code:addons/l10n_cu_hr_employee_contract/models/hr_contract.py:0
+#: code:addons/l10n_cu_hr_employee_contract/models/hr_contract.py:0
+#: code:addons/l10n_cu_hr_employee_contract/models/hr_contract.py:0
+#, python-format
+msgid "New"
+msgstr "Nuevo"
+
+
+#. module: l10n_cu_hr_employee_contract
+#: model:ir.model.fields,help:l10n_cu_hr_employee_contract.field_hr_contract__date_end
+msgid "End date of the contract (if it's a fixed-term contract)."
+msgstr ""
+"Fecha de finalización del contrato (si es un contrato por tiempo "
+"determinado)."
+
+
+#. module: l10n_cu_hr_employee_contract
+#: model:ir.model.fields,field_description:l10n_cu_hr_employee_contract.field_hr_contract__date_end
+#: model_terms:ir.ui.view,arch_db:l10n_cu_hr_employee_contract.hr_contract_view_form_inherit
+msgid "End Date"
+msgstr "Fecha de finalización del contrato"
+
+
+#. module: l10n_cu_hr_employee_contract
+#: model:ir.model.fields.selection,name:l10n_cu_hr_employee_contract.selection__hr_contract__contract_state__close
+msgid "Expired"
+msgstr "Cerrado"
+
+#. module: l10n_cu_hr_employee_contract
+#: model:ir.model.fields.selection,name:l10n_cu_hr_employee_contract.selection__hr_contract__contract_state__open
+msgid "Running"
+msgstr "Aprobado"
+
+#. module: l10n_cu_hr_employee_contract
+#: model:ir.model.fields.selection,name:l10n_cu_hr_employee_contract.selection__hr_contract__contract_state__draft
+msgid "New"
+msgstr "Nuevo"
+
+#. module: l10n_cu_hr_employee_contract
+#: model:ir.model.fields,field_description:l10n_cu_hr_employee_contract.field_hr_contract__contract_state
+msgid "Status"
+msgstr "Estado"
+
+
+#. module: l10n_cu_hr_employee_contract
+#: model:ir.model.fields,help:l10n_cu_hr_employee_contract.field_hr_contract__contract_state
+msgid "Status of the contract"
+msgstr "Estado del contrato"
+
+#. module: l10n_cu_hr_employee_contract
+#: model:ir.model.fields,field_description:l10n_cu_hr_employee_contract.field_hr_contract__contract_determined_contract_type_id
+msgid "Determined Contract Type"
+msgstr "Tipo de Contrato Determinado"
+
+
+#. module: l10n_cu_hr_employee_contract
+#: model:ir.ui.menu,name:l10n_cu_hr_employee_contract.menu_view_determined_contract_type
+#: model:ir.actions.act_window,name:l10n_cu_hr_employee_contract.open_determined_contract_type_action
+msgid "Determined Contract Type"
+msgstr "Tipo de Contrato Determinado"
+
+
+#. module: l10n_cu_hr_employee_contract
+#: model_terms:ir.actions.act_window,help:l10n_cu_hr_employee_contract.open_determined_contract_type_action
+msgid "Use Determined Contract Types to categorize your Contract."
+msgstr "Utilice Tipos de contratos determinados para clasificar a sus contratos de empleados."
+
+
+#. module: l10n_cu_hr_employee_contract
+#: model_terms:ir.actions.act_window,help:l10n_cu_hr_employee_contract.open_determined_contract_type_action
+msgid "No Determined Contract Type found ! Let's create one"
+msgstr "No se Encontraron Tipos de contratos determinados. ¡Creemos una!"
+
+
+#. module: l10n_cu_hr_employee_contract
+#: model:ir.model,name:l10n_cu_hr_employee_contract.model_determined_contract_type
+msgid "Determined Contract Type"
+msgstr "Tipo de Contrato Determinado"
+
+#. module: l10n_cu_hr_employee_contract
+#: model:ir.model.fields,field_description:l10n_cu_hr_employee_contract.field_determined_contract_type__name
+msgid "Name"
+msgstr "Descripción"
+
+
+
+
