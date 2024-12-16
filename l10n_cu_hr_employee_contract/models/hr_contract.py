@@ -6,7 +6,7 @@ class HrContract(models.Model):
     _inherit = 'hr.contract'
 
     name = fields.Char(string='Contract Reference', required=True,
-                       default=_('New'), readonly=True)
+                       default=lambda self: _('New'), readonly=True)
     contract_state = fields.Selection([
         ('draft', 'New'),
         ('open', 'Running'),
