@@ -11,7 +11,7 @@ class Hrjob(models.Model):
                                                string='Occupational Category', ondelete='restrict',check_company=True)
     currency_id = fields.Many2one(string="Currency", related='company_id.currency_id', readonly=True)
 
-    wage = fields.Monetary('Wage', required=True, tracking=True, help="Employee's monthly gross wage.", group_operator="avg")
+    wage = fields.Monetary('Wage', required=True, tracking=True, help="Employee's monthly gross wage.", aggregator="avg")
 
     @api.constrains('name', 'department_id')
     def _check_name_code(self):

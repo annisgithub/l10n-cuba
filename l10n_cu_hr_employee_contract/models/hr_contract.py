@@ -6,7 +6,7 @@ class HrContract(models.Model):
     _inherit = 'hr.contract'
 
     name = fields.Char(string='Contract Reference', required=True,
-                       default=_('New'), readonly=True)
+                       default=lambda self: _('New'), readonly=True)
     contract_state = fields.Selection([
         ('draft', 'New'),
         ('open', 'Running'),
@@ -18,11 +18,11 @@ class HrContract(models.Model):
                                         default="indeterminado",string="Contract Type")
     contract_type_id = fields.Many2one('hr.contract.type', "Other Contract Type",
                                        compute="_compute_employee_contract",
-                                       tracking=True)
+                                       tracking=True,store=True)
 
     wage = fields.Monetary('Wage', required=True,compute="_compute_employee_contract",
                            tracking=True, help="Employee's monthly gross wage.",
-                           group_operator="avg")
+                           aggregator="avg",store=True)
 
     determined_contract_type_id = fields.Many2one('determined.contract.type', string='Determined Contract Type',
                                                   ondelete='restrict',check_company=True)
@@ -91,11 +91,16 @@ class HrContract(models.Model):
                 sequence_obj.write({'number_next_actual': next_number})
         return str(sequence).replace('CONTRACT_PREFIX', prefix).replace('SUFFIX_VALUE', suffix)
 
-    @api.model
-    def create(self, vals):
-        if vals.get('name', _('New')) == _('New'):
-            vals['name'] = self._prepare_contract_name(vals)
-        return super(HrContract, self).create(vals)
+    @api.model_create_multi
+    def create(self, vals_list):
+        if not isinstance(vals_list, list):
+            vals_list = [vals_list]
+
+        for vals in vals_list:
+            if vals.get('name', _('New')) == _('New'):
+                vals['name'] = self._prepare_contract_name(vals)
+
+        return super().create(vals_list)
 
     def write(self, vals):
         for record in self:

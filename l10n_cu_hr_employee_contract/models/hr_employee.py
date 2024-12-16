@@ -13,7 +13,7 @@ class HrEmployee(models.Model):
     wage = fields.Monetary('Wage', required=True, tracking=True,
                            compute='_compute_job',
                            help="Employee's monthly gross wage.",
-                           group_operator="avg")
+                           aggregator="avg")
 
     @api.depends('job_id')
     def _compute_job(self):

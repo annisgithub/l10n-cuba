@@ -45,6 +45,7 @@ msgid "State"
 msgstr "Estado"
 
 #. module: l10n_cu_hr_payroll_movement
+#. odoo-python
 #: code:addons/co_rr_hh/models/payroll_movement.py:0
 #: model:ir.model.fields.selection,name:l10n_cu_hr_payroll_movement.selection__payroll_movement__state__draft
 #, python-format

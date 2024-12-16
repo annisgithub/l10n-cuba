@@ -10,7 +10,7 @@ class PayrollMovement(models.Model):
     employee_id = fields.Many2one('hr.employee', string='Employee', required=True,check_company=True)
     contract_id = fields.Many2one('hr.contract', 'Contract Reference', required=True,
                                          domain="[('employee_id', '=', employee_id)]")
-    state = fields.Selection([('draft', _('New')), ('open', 'Open')], 'State', required=True, default='draft',
+    state = fields.Selection([('draft', 'New'), ('open', 'Open')], 'State', required=True, default='draft',
                              store=True)
     effective_date = fields.Date('Effective Date', required=True)
 
