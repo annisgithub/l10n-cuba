@@ -18,11 +18,11 @@ class HrContract(models.Model):
                                         default="indeterminado",string="Contract Type")
     contract_type_id = fields.Many2one('hr.contract.type', "Other Contract Type",
                                        compute="_compute_employee_contract",
-                                       tracking=True)
+                                       tracking=True, store=True)
 
-    wage = fields.Monetary('Wage', required=True,compute="_compute_employee_contract",
+    wage = fields.Monetary('Wage', required=True, compute="_compute_employee_contract",
                            tracking=True, help="Employee's monthly gross wage.",
-                           group_operator="avg")
+                           aggregator="avg", store=True)
 
     determined_contract_type_id = fields.Many2one('determined.contract.type', string='Determined Contract Type',
                                                   ondelete='restrict',check_company=True)
