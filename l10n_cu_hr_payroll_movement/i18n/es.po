@@ -152,9 +152,48 @@ msgstr "Empleado"
 msgid "Contract"
 msgstr "Contrato"
 
+#. module: l10n_cu_hr_payroll_movement
+#: model_terms:ir.ui.view,arch_db:l10n_cu_hr_payroll_movement.hr_payroll_employee_form
+msgid "Confirm"
+msgstr "Aprobar"
+
 
 #. module: l10n_cu_hr_payroll_movement
 #: model:ir.model,name:l10n_cu_hr_payroll_movement.model_payroll_movement
 msgid "Payroll Movement"
 msgstr "Movimiento de Nómina"
+
+#. module: l10n_cu_hr_payroll_movement
+#. odoo-python
+#: code:addons/l10n_cu_hr_payroll_movement/models/payroll_movement.py:0
+#, python-format
+msgid "The payroll movement has already been approved, it cannot be deleted."
+msgstr "El movimiento de nómina ya ha sido aprobado, no se puede eliminar."
+
+
+#. module: l10n_cu_hr_payroll_movement
+#: model:ir.model.fields,field_description:l10n_cu_hr_payroll_movement.field_payroll_movement__movement_type
+msgid "Movement Type"
+msgstr "Tipo de movimiento"
+
+#. module: l10n_cu_hr_payroll_movement
+#: code:addons/co_rr_hh/models/payroll_movement.py:0
+#: model:ir.model.fields.selection,name:l10n_cu_hr_payroll_movement.selection__payroll_movement__movement_type__high
+#, python-format
+msgid "High"
+msgstr "Alta"
+
+#. module: l10n_cu_hr_payroll_movement
+#: code:addons/co_rr_hh/models/payroll_movement.py:0
+#: model:ir.model.fields.selection,name:l10n_cu_hr_payroll_movement.selection__payroll_movement__state__low
+#, python-format
+msgid "Low"
+msgstr "Baja"
+
+#. module: l10n_cu_hr_payroll_movement
+#: code:addons/co_rr_hh/models/payroll_movement.py:0
+#: model:ir.model.fields.selection,name:l10n_cu_hr_payroll_movement.selection__payroll_movement__state__change
+#, python-format
+msgid "Change"
+msgstr "Cambio"
 

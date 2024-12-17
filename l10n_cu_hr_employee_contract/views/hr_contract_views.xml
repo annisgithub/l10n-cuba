@@ -10,6 +10,7 @@
                 <field name="contract_state" groups="hr_contract.group_hr_contract_manager" widget="statusbar"/>
             </xpath>
             <xpath expr="//group[@name='top_info_right']/field[@name='contract_type_id'][@groups='hr_contract.group_hr_contract_manager']" position="after">
+                <field name="occupational_category_id"/>
                 <field name="contract_type"/>
                 <field name="determined_contract_type_id" invisible="contract_type != 'determinado'" required="contract_type == 'determinado'"
                        groups="!hr_contract.group_hr_contract_manager" options="{'no_open': True, 'no_create': True}"/>

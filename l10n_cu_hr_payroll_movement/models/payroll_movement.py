@@ -10,9 +10,9 @@ class PayrollMovement(models.Model):
     employee_id = fields.Many2one('hr.employee', string='Employee', required=True,check_company=True)
     contract_id = fields.Many2one('hr.contract', 'Contract Reference', required=True,
                                          domain="[('employee_id', '=', employee_id)]")
-    state = fields.Selection([('draft', _('New')), ('open', 'Open')], 'State', required=True, default='draft',
+    state = fields.Selection([('draft', 'New'), ('open', 'Open')], 'State', required=True, default='draft',
                              store=True)
-    effective_date = fields.Date('Effective Date', required=True)
+    effective_date = fields.Date('Effective Date')
 
     # Actual situation
     actual_wage = fields.Float(string='Basic Salary', required=True, store=True)
@@ -39,6 +39,11 @@ class PayrollMovement(models.Model):
     new_resource_calendar_id = fields.Many2one('resource.calendar',string="New Working Hours",
                                                default=lambda self: self.env.company.resource_calendar_id.id,
                                                check_company=True)
+
+    movement_type = fields.Selection([('high', 'High'), ('low', 'Low'), ('change', 'Change')], 'Movement Type', required=True,
+                                     default='high',
+                                     store=True)
+
     def name_get(self):
         """
         Retrieves the name of the record in the format "MOV - [contract_reference.name]".
@@ -58,6 +63,43 @@ class PayrollMovement(models.Model):
         for record in self:
             if record.state == 'open':
                 raise ValidationError(_('The payroll movement has already been approved, it cannot be deleted.'))
+
+    def action_approve(self):
+        for record in self:
+            record.state = 'open'
+            record.effective_date = fields.Date.today()
+            record.update_contract()
+
+    def update_contract(self):
+        for record in self:
+            if record.contract_id:
+                contract_state = 'open'
+                effective_date = record.effective_date
+                values_to_update = {}
+                if record.movement_type == 'high':
+                    values_to_update = {
+                        'wage': record.actual_wage,
+                        'job_id': record.actual_situation_id.id,
+                        'occupational_category_id': record.actual_occupational_category_id.id,
+                        'department_id': record.actual_department_id.id,
+                        'resource_calendar_id': record.actual_resource_calendar_id.id,
+                }
+                elif record.movement_type == 'change':
+                    values_to_update = {
+                        'wage': record.new_wage,
+                        'job_id': record.new_situation_id.id,
+                        'occupational_category_id': record.new_occupational_category_id.id,
+                        'department_id': record.new_department_id.id,
+                        'resource_calendar_id': record.new_resource_calendar_id.id,
+                    }
+                elif record.movement_type == 'low':
+                    contract_state = 'closed'
+                    values_to_update = {
+                        'date_end': effective_date
+                    }
+                if values_to_update:
+                    values_to_update.update({'contract_state':contract_state,'date_start': effective_date})
+                    record.contract_id.write(values_to_update)
 
 
 

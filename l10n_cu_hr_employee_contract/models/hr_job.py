@@ -8,7 +8,8 @@ class Hrjob(models.Model):
     designation = fields.Boolean(string='Designation')
 
     occupational_category_id = fields.Many2one('occupational.category',
-                                               string='Occupational Category', ondelete='restrict',check_company=True)
+                                               string='Occupational Category', ondelete='restrict',
+                                               check_company=True,store=True)
     currency_id = fields.Many2one(string="Currency", related='company_id.currency_id', readonly=True)
 
     wage = fields.Monetary('Wage', required=True, tracking=True, help="Employee's monthly gross wage.", group_operator="avg")

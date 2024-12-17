@@ -180,6 +180,11 @@ msgid "Occupational Category"
 msgstr "Categoría ocupacional"
 
 #. module: l10n_cu_hr_employee_contract
+#: model:ir.model.fields,field_description:l10n_cu_hr_employee_contract.field_hr_contract__occupational_category_id
+msgid "Occupational Category"
+msgstr "Categoría ocupacional"
+
+#. module: l10n_cu_hr_employee_contract
 #: model_terms:ir.ui.view,arch_db:l10n_cu_hr_employee_contract.view_form_hr_job_inherited
 msgid "Contract"
 msgstr "Contrato"

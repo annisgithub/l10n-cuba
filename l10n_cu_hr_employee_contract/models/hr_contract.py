@@ -20,7 +20,7 @@ class HrContract(models.Model):
                                        compute="_compute_employee_contract",
                                        tracking=True, store=True)
 
-    wage = fields.Monetary('Wage', required=True, compute="_compute_employee_contract",
+    wage = fields.Monetary('Wage', compute="_compute_job",
                            tracking=True, help="Employee's monthly gross wage.",
                            group_operator="avg", store=True)
 
@@ -33,13 +33,24 @@ class HrContract(models.Model):
     date_end = fields.Date(string='End Date', tracking=True,
         help="End date of the contract (if it's a fixed-term contract).",compute='_compute_end_date', store=True)
 
+    occupational_category_id = fields.Many2one('occupational.category',
+                                               string='Occupational Category',
+                                               compute='_compute_job', ondelete='restrict',
+                                               check_company=True, store=True)
+
 
     @api.depends('employee_id')
     def _compute_employee_contract(self):
         for contract in self.filtered('employee_id'):
             contract.contract_type_id = contract.job_id.contract_type_id
-            contract.wage = contract.job_id.wage
         return super(HrContract, self)._compute_employee_contract()
+
+    @api.depends('job_id')
+    def _compute_job(self):
+        for record in self.filtered('job_id'):
+            record.wage = record.job_id.wage if record.job_id else 0.00
+            record.occupational_category_id = record.job_id and record.job_id.occupational_category_id
+
 
     @api.constrains('wage')
     def _check_wage(self):
@@ -95,6 +106,9 @@ class HrContract(models.Model):
     def create(self, vals):
         if vals.get('name', _('New')) == _('New'):
             vals['name'] = self._prepare_contract_name(vals)
+        if 'wage' not in vals:
+            job = self.env['hr.job'].browse(vals.get('job_id',None))
+            vals['wage'] = job and job.wage
         return super(HrContract, self).create(vals)
 
     def write(self, vals):
