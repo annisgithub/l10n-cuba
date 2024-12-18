@@ -101,5 +101,8 @@ class PayrollMovement(models.Model):
                     values_to_update.update({'contract_state':contract_state,'date_start': effective_date})
                     record.contract_id.write(values_to_update)
 
+    def print_approve_movement(self):
+        return self.env.ref('l10n_cu_hr_payroll_movement.action_report_payroll_movement').report_action(self)
+
 
 

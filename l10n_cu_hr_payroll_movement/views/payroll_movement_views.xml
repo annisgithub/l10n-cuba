@@ -23,9 +23,9 @@
                         <button name="action_approve" string="Confirm" type="object" class="oe_highlight"
                                 invisible="state == 'open'"/>
 
-<!--                        <button name="print_approve_movement" string="Imprimir modelo SC-4-02" type="object"-->
-<!--                                class="oe_highlight"-->
-<!--                                attrs="{'invisible': [('state', '!=', 'open')]}"/>-->
+                        <button name="print_approve_movement" string="Imprimir modelo SC-4-02" type="object"
+                                class="oe_highlight" invisible="state != 'open'"/>
+
                         <field name="state" widget="statusbar" readonly="1"/>
                     </header>
                     <sheet>
