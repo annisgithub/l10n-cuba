@@ -116,18 +116,18 @@ msgstr "Nueva Horario Laboral"
 
 #. module: l10n_cu_hr_payroll_movement
 #: model:ir.ui.menu,name:l10n_cu_hr_payroll_movement.hr_menu_hr_payroll
-#: model:ir.actions.act_window,name:l10n_cu_hr_payroll_movement.open_occupational_category_action
+#: model:ir.actions.act_window,name:l10n_cu_hr_payroll_movement.action_hr_payroll
 msgid "Payroll Movements"
 msgstr "Movimiento de Nómina
 
 #. module: l10n_cu_hr_payroll_movement
-#: model_terms:ir.actions.act_window,help:l10n_cu_hr_payroll_movement.open_occupational_category_action
+#: model_terms:ir.actions.act_window,help:l10n_cu_hr_payroll_movement.action_hr_payroll
 msgid "Use Movement to categorize your Employees."
 msgstr "Utilice Movimientos de Nómina para clasificar a sus empleados."
 
 
 #. module: l10n_cu_hr_payroll_movement
-#: model_terms:ir.actions.act_window,help:l10n_cu_hr_payroll_movement.open_occupational_category_action
+#: model_terms:ir.actions.act_window,help:l10n_cu_hr_payroll_movement.action_hr_payroll
 msgid "No Movement found ! Let's create one"
 msgstr "No se Encontraron Movimientos de Nómina. ¡Creemos una!"
 
@@ -196,4 +196,83 @@ msgstr "Baja"
 #, python-format
 msgid "Change"
 msgstr "Cambio"
+
+#. module: l10n_cu_hr_payroll_movement
+#: model_terms:ir.ui.view,arch_db:l10n_cu_hr_payroll_movement.res_config_settings_view_form
+msgid "Payroll Movement"
+msgstr "Movimiento de Nómina"
+
+#. module: l10n_cu_hr_payroll_movement
+#: model_terms:ir.ui.view,arch_db:l10n_cu_hr_payroll_movement.res_config_settings_view_form
+msgid "Central Office"
+msgstr "Oficina Central"
+
+#. module: l10n_cu_hr_payroll_movement
+#: model_terms:ir.ui.view,arch_db:l10n_cu_hr_payroll_movement.res_config_settings_view_form
+msgid "Business Group"
+msgstr "Grupo de Negocios"
+
+#. module: l10n_cu_hr_payroll_movement
+#: model_terms:ir.ui.view,arch_db:l10n_cu_hr_payroll_movement.res_config_settings_view_form
+msgid "Ministry"
+msgstr "Ministerio"
+
+#. module: l10n_cu_hr_payroll_movement
+#: model_terms:ir.ui.view,arch_db:l10n_cu_hr_payroll_movement.res_config_settings_view_form
+msgid "Central Office Abbreviation"
+msgstr "Abreviatura Oficina Central"
+
+#. module: l10n_cu_hr_payroll_movement
+#: model_terms:ir.ui.view,arch_db:l10n_cu_hr_payroll_movement.res_config_settings_view_form
+msgid "Abbreviation Group"
+msgstr "Abreviatura del Grupo Empresarial"
+
+#. module: l10n_cu_hr_payroll_movement
+#: model_terms:ir.ui.view,arch_db:l10n_cu_hr_payroll_movement.res_config_settings_view_form
+msgid "Ministry Abbreviation"
+msgstr "Abreviatura del Ministerio"
+
+
+#. module: l10n_cu_hr_payroll_movement
+#: model_terms:ir.ui.view,arch_db:l10n_cu_hr_payroll_movement.res_config_settings_view_form
+msgid "Legal Address"
+msgstr "Dirección Legal"
+
+#. module: l10n_cu_hr_payroll_movement
+#: model_terms:ir.ui.view,arch_db:l10n_cu_hr_payroll_movement.res_config_settings_view_form
+msgid "Job"
+msgstr "Cargo"
+
+#. module: l10n_cu_hr_payroll_movement
+#: model_terms:ir.ui.view,arch_db:l10n_cu_hr_payroll_movement.res_config_settings_view_form
+msgid "Resolution"
+msgstr "Resolución"
+
+#. module: l10n_cu_hr_payroll_movement
+#: model_terms:ir.ui.view,arch_db:l10n_cu_hr_payroll_movement.res_config_settings_view_form
+msgid "Director"
+msgstr "Director"
+
+#. module: l10n_cu_hr_payroll_movement
+#: model_terms:ir.ui.view,arch_db:l10n_cu_hr_payroll_movement.res_config_settings_view_form
+msgid "Phone"
+msgstr "Teléfono"
+
+
+#. module: l10n_cu_hr_payroll_movement
+#: model_terms:ir.ui.view,arch_db:l10n_cu_hr_payroll_movement.res_config_settings_view_form
+msgid "Email"
+msgstr "Correo"
+
+#. module: l10n_cu_hr_payroll_movement
+#: model_terms:ir.ui.view,arch_db:l10n_cu_hr_payroll_movement.res_config_settings_view_form
+msgid "Employer"
+msgstr "Empleador"
+
+#. module: l10n_cu_hr_payroll_movement
+#: model_terms:ir.ui.view,arch_db:l10n_cu_hr_payroll_movement.hr_contract_view_form_inherit
+msgid "Print contract proforma"
+msgstr "Imprimir Proforma de Contrato"
+
+
 
