@@ -1,0 +1,38 @@
+<odoo>
+    <record id="hr_contract_view_form_inherit" model="ir.ui.view">
+        <field name="name">hr.contract.view.form.inherit</field>
+        <field name="model">hr.contract</field>
+        <field name="inherit_id" ref="hr_contract.hr_contract_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='state']" position="after">
+                <div class="oe_button_box" name="button_box">
+                            <button name="action_open_movement_list"
+                                class="oe_stat_button"
+                                icon="fa-book"
+                                type="object"
+                                invisible="contracts_count == 0"
+                                groups="hr_contract.group_hr_contract_manager">
+                                <div class="o_stat_info">
+                                    <span class="o_stat_value">
+                                        <field name="movements_count"/>
+                                    </span>
+                                    <span invisible="movements_count == 1" class="o_stat_text" >
+                                        Movements
+                                    </span>
+                                    <span invisible="movements_count &gt; 1" class="o_stat_text">
+                                        Movements
+                                    </span>
+                                </div>
+                            </button>
+                        </div>
+            </xpath>
+            <xpath expr="//button[@name='print_supplier_contract']" position="before">
+                <field name="movements_count_change" invisible="1"/>
+            </xpath>
+            <xpath expr="//button[@name='print_supplier_contract']" position="attributes">
+                <attribute name="invisible">contract_state == 'draft' or (movements_count_change &lt; 0 or movements_count_change == 0)</attribute>
+            </xpath>
+       </field>
+    </record>
+
+</odoo>

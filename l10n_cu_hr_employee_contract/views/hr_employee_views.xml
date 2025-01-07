@@ -7,8 +7,8 @@
         <field name="arch" type="xml">
             <xpath expr="//div[@id='o_work_employee_main']" position="inside">
                 <group name="others" string="Others" groups="hr.group_hr_user">
-                    <field name="occupational_category_id" required="1"/>
                     <field name="wage" required="1"/>
+                    <field name="occupational_category_id" required="1"/>
                 </group>
              </xpath>
         </field>

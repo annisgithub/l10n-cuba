@@ -13,8 +13,10 @@
                         <field name="wage" required="1"/>
                     </group>
                 </page>
-
              </xpath>
+            <xpath expr="//field[@name='department_id']" position="attributes">
+                <attribute name="required">1</attribute>
+            </xpath>
         </field>
     </record>
 </odoo>

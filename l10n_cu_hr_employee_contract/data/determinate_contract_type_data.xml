@@ -18,11 +18,11 @@
         <record id="contract_type_5"  model="determined.contract.type">
             <field name="name">Sustitución temporal a trabajadores ausentes por causas justificadas</field>
         </record>
-        <record id="contract_type_2" model="determined.contract.type">
+        <record id="contract_type_6" model="determined.contract.type">
             <field name="name">Distancia</field>
 
         </record>
-        <record id="contract_type_3" model="determined.contract.type">
+        <record id="contract_type_7" model="determined.contract.type">
             <field name="name">Teletrabajo</field>
         </record>
     </data>

@@ -53,6 +53,10 @@ msgstr "Designado"
 msgid "Contract End Date"
 msgstr "Fecha de finalización del contrato"
 
+#. module: l10n_cu_hr_employee_contract
+#: model_terms:ir.ui.view,arch_db:l10n_cu_hr_employee_contract.hr_contract_view_search_inherit
+msgid "Status"
+msgstr "Estados"
 
 #. module: l10n_cu_hr_employee_contract
 #. odoo-python
@@ -180,6 +184,11 @@ msgid "Occupational Category"
 msgstr "Categoría ocupacional"
 
 #. module: l10n_cu_hr_employee_contract
+#: model:ir.model.fields,field_description:l10n_cu_hr_employee_contract.field_hr_contract__occupational_category_id
+msgid "Occupational Category"
+msgstr "Categoría ocupacional"
+
+#. module: l10n_cu_hr_employee_contract
 #: model_terms:ir.ui.view,arch_db:l10n_cu_hr_employee_contract.view_form_hr_job_inherited
 msgid "Contract"
 msgstr "Contrato"
@@ -212,3 +221,150 @@ msgstr "El salario básico no puede ser menor o igual a 0.00"
 msgid "The basic salary must be greater than 0.00."
 msgstr "El salario básico no puede ser menor o igual a 0.00"
 
+#. module: l10n_cu_hr_employee_contract
+#: model_terms:ir.ui.view,arch_db:l10n_cu_hr_employee_contract.res_config_settings_view_form
+msgid "Payroll Movement"
+msgstr "Configuración de reportes de Proforma y Suplemento del contrato"
+
+#. module: l10n_cu_hr_employee_contract
+#: model_terms:ir.ui.view,arch_db:l10n_cu_hr_employee_contract.res_config_settings_view_form
+#: model_terms:ir.ui.view,arch_db:l10n_cu_hr_employee_contract.res_company_view_form
+#: model:ir.model.fields,field_description:l10n_cu_hr_employee_contract.field_res_company__central_office
+msgid "Central Office"
+msgstr "Oficina Central"
+
+#. module: l10n_cu_hr_employee_contract
+#: model_terms:ir.ui.view,arch_db:l10n_cu_hr_employee_contract.res_config_settings_view_form
+#: model_terms:ir.ui.view,arch_db:l10n_cu_hr_employee_contract.res_company_view_form
+#: model:ir.model.fields,field_description:l10n_cu_hr_employee_contract.field_res_company__business_group
+msgid "Business Group"
+msgstr "Grupo empresarial"
+
+#. module: l10n_cu_hr_employee_contract
+#: model_terms:ir.ui.view,arch_db:l10n_cu_hr_employee_contract.res_config_settings_view_form
+#: model_terms:ir.ui.view,arch_db:l10n_cu_hr_employee_contract.res_company_view_form
+#: model:ir.model.fields,field_description:l10n_cu_hr_employee_contract.field_res_company__ministry
+msgid "Ministry"
+msgstr "Ministerio"
+
+#. module: l10n_cu_hr_employee_contract
+#: model_terms:ir.ui.view,arch_db:l10n_cu_hr_employee_contract.res_config_settings_view_form
+#: model_terms:ir.ui.view,arch_db:l10n_cu_hr_employee_contract.res_company_view_form
+#: model:ir.model.fields,field_description:l10n_cu_hr_employee_contract.field_res_company__central_office_abbreviation
+msgid "Central Office Abbreviation"
+msgstr "Abreviatura oficina central"
+
+#. module: l10n_cu_hr_employee_contract
+#: model_terms:ir.ui.view,arch_db:l10n_cu_hr_employee_contract.res_config_settings_view_form
+#: model_terms:ir.ui.view,arch_db:l10n_cu_hr_employee_contract.res_company_view_form
+#: model:ir.model.fields,field_description:l10n_cu_hr_employee_contract.field_res_company__abbreviation_group
+msgid "Abbreviation Group"
+msgstr "Abreviatura del grupo empresarial"
+
+#. module: l10n_cu_hr_employee_contract
+#: model_terms:ir.ui.view,arch_db:l10n_cu_hr_employee_contract.res_config_settings_view_form
+#: model_terms:ir.ui.view,arch_db:l10n_cu_hr_employee_contract.res_company_view_form
+#: model:ir.model.fields,field_description:l10n_cu_hr_employee_contract.field_res_company__ministry_abbreviation
+msgid "Ministry Abbreviation"
+msgstr "Abreviatura del ministerio"
+
+
+#. module: l10n_cu_hr_employee_contract
+#: model_terms:ir.ui.view,arch_db:l10n_cu_hr_employee_contract.res_config_settings_view_form
+#: model_terms:ir.ui.view,arch_db:l10n_cu_hr_employee_contract.res_company_view_form
+#: model:ir.model.fields,field_description:l10n_cu_hr_employee_contract.field_res_company__legal_address
+msgid "Legal Address"
+msgstr "Domicilio legal"
+
+#. module: l10n_cu_hr_employee_contract
+#: model_terms:ir.ui.view,arch_db:l10n_cu_hr_employee_contract.res_config_settings_view_form
+#: model_terms:ir.ui.view,arch_db:l10n_cu_hr_employee_contract.res_company_view_form
+#: model:ir.model.fields,field_description:l10n_cu_hr_employee_contract.field_res_company__job_id
+msgid "Job"
+msgstr "Puesto de trabajo"
+
+#. module: l10n_cu_hr_employee_contract
+#: model_terms:ir.ui.view,arch_db:l10n_cu_hr_employee_contract.res_config_settings_view_form
+#: model_terms:ir.ui.view,arch_db:l10n_cu_hr_employee_contract.res_company_view_form
+#: model:ir.model.fields,field_description:l10n_cu_hr_employee_contract.field_res_company__resolution
+msgid "Resolution"
+msgstr "Resolución"
+
+#. module: l10n_cu_hr_employee_contract
+#: model_terms:ir.ui.view,arch_db:l10n_cu_hr_employee_contract.res_config_settings_view_form
+msgid "Director"
+msgstr "Director"
+
+#. module: l10n_cu_hr_employee_contract
+#: model_terms:ir.ui.view,arch_db:l10n_cu_hr_employee_contract.res_config_settings_view_form
+msgid "Phone"
+msgstr "Teléfono"
+
+
+#. module: l10n_cu_hr_employee_contract
+#: model_terms:ir.ui.view,arch_db:l10n_cu_hr_employee_contract.res_config_settings_view_form
+msgid "Email"
+msgstr "Correo"
+
+#. module: l10n_cu_hr_employee_contract
+#: model_terms:ir.ui.view,arch_db:l10n_cu_hr_employee_contract.res_config_settings_view_form
+#: model_terms:ir.ui.view,arch_db:l10n_cu_hr_employee_contract.res_company_view_form
+#: model:ir.model.fields,field_description:l10n_cu_hr_employee_contract.field_res_company__employer
+msgid "Footer page"
+msgstr "Pie de firma"
+
+#. module: l10n_cu_hr_employee_contract
+#: model_terms:ir.ui.view,arch_db:l10n_cu_hr_employee_contract.hr_contract_view_form_inherit
+msgid "Print contract proforma"
+msgstr "Imprimir Proforma de Contrato"
+
+#. module: l10n_cu_hr_employee_contract
+#: model_terms:ir.ui.view,arch_db:l10n_cu_hr_employee_contract.hr_contract_view_form_inherit
+msgid "Print supplier contract"
+msgstr "Imprimir suplemento al contrato"
+
+
+#. module: l10n_cu_hr_employee_contract
+#: code:addons/l10n_cu_hr_employee_contract/models/hr_contract.py:0
+#, python-format
+msgid "There is not any contract next to expiry"
+msgstr "No existe contrato alguno próximo a vencer"
+
+#. module: l10n_cu_hr_employee_contract
+#: code:addons/l10n_cu_hr_employee_contract/models/hr_employee.py:0
+#: code:addons/l10n_cu_hr_employee_contract/models/hr_job.py:0
+#, python-format
+msgid "The basic salary must be greater than 0.00."
+msgstr "El salario básico debe ser mayor que 0.00."
+
+
+#. module: l10n_cu_hr_employee_contract
+#: model:ir.actions.report,name:l10n_cu_hr_employee_contract.report_fixed_term_contract_action
+#: model:ir.ui.menu,name:l10n_cu_hr_employee_contract.menu_fixed_term_contract_report
+msgid "Report of contracts due to expire within a period"
+msgstr "Reporte de contratos por tiempo a vencerse en un período"
+
+#. module: l10n_cu_hr_employee_contract
+#. odoo-python
+#: code:addons/l10n_cu_hr_employee_contract/models/hr_contract.py:0
+#, python-format
+msgid ""
+"According to Employee's Working Permit Expiration Date, this contract has "
+"been put in red on the %s. Please advise and correct."
+msgstr ""
+"Según la fecha de vencimiento del permiso de trabajo del empleado, se han "
+"hecho cambios en este contrato el %s, infórmelo y corríjalo."
+
+
+#. module: l10n_cu_hr_employee_contract
+#. odoo-python
+#: code:addons/l10n_cu_hr_employee_contract/models/hr_contract.py:0
+#, python-format
+msgid "The work permit of %s is about to expire."
+msgstr "El permiso de trabajo de %s está a punto de vencer."
+
+
+#. module: l10n_cu_hr_employee_contract
+#: model:ir.model.fields,field_description:l10n_cu_hr_employee_contract.field_hr_contract__job_id
+msgid "Job Position"
+msgstr "Puesto de trabajo"

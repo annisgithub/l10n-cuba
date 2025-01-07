@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="view_form_hr_contract_employee_inherited" model="ir.ui.view">
+        <field name="name">view_hr_contract_employee_form</field>
+        <field name="model">hr.employee</field>
+        <field name="inherit_id" ref="hr.view_employee_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//button[@name='action_open_contract']" position="after">
+                <button name="action_open_movement_list"
+                                class="oe_stat_button"
+                                icon="fa-book"
+                                type="object"
+                                invisible="contracts_count == 0"
+                                groups="hr_contract.group_hr_contract_manager">
+                                <div class="o_stat_info">
+                                    <span class="o_stat_value">
+                                        <field name="movements_count"/>
+                                    </span>
+                                    <span invisible="movements_count == 1" class="o_stat_text" >
+                                        Movements
+                                    </span>
+                                    <span invisible="movements_count &gt; 1" class="o_stat_text">
+                                        Movements
+                                    </span>
+                                </div>
+                            </button>
+
+            </xpath>
+        </field>
+    </record>
+
+</odoo>
+
+

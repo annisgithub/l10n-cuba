@@ -56,5 +56,6 @@ no es un plan contable estable.
 ----
 ## Próximos cambios.
 
-Desarrollo de módulos como Activos Fijos. y otros necesarios para el mejor control de las entidades y pymes del pais. Tambien se desarrolla los modulos de Tesorería y control del gasto del presupuesto segun las normas del MFP .para las UPs. 
+Desarrollo de módulos como Activos Fijos. y otros necesarios para el mejor control de las entidades y pymes del pais. Tambien se desarrolla los modulos de Tesorería y control del gasto del presupuesto segun las normas del MFP .para las UPs
 
+.
