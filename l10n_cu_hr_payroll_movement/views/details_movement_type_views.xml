@@ -12,11 +12,11 @@
                         <field name="movement_type"/>
                     </group>
                     <group>
-                        <field name="reasons_movement_type_ids" mode="tree" string="">
-                            <tree limit="10">
+                        <field name="reasons_movement_type_ids" mode="list" string="">
+                            <list limit="10">
                                 <field name="name"/>
 
-                            </tree>
+                            </list>
                         </field>
                     </group>
                 </sheet>
@@ -29,19 +29,19 @@
         <field name="model">details.movement.type</field>
         <field eval="8" name="priority"/>
         <field name="arch" type="xml">
-            <tree string="Details Movement Type">
+            <list string="Details Movement Type">
                 <field name="name"/>
                 <field name="movement_type"/>
                 <field name="company_id" invisible="1"/>
                 <field name="reasons_movement_type_ids" widget="many2many_tags"/>
-            </tree>
+            </list>
         </field>
      </record>
 
      <record id="open_details_movement_type_action" model="ir.actions.act_window">
         <field name="name">Details Movement Type</field>
         <field name="res_model">details.movement.type</field>
-        <field name="view_mode">tree,form</field>
+        <field name="view_mode">list,form</field>
         <field name="help" type="html">
             <p class="o_view_nocontent_smiling_face">
                 No Details Movement Type found ! Let's create one
