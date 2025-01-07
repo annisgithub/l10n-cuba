@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-from odoo import fields, models, api
+from odoo import fields, models, api,_
 from odoo.exceptions import ValidationError
 
 class Hrjob(models.Model):
@@ -20,16 +20,17 @@ class Hrjob(models.Model):
         Valida que el name y department_id sean únicos
         '''
         if len(self.search([('name', '=', self.name),
-                            ('department_id', '=', self.department_id),
+                            ('department_id', '=', self.department_id.id),
                             ('company_id', '=', self.company_id.id),
                             ('id', 'not in', self.ids)])):
             raise ValidationError(u'El puesto de trabajo debe ser único por '
                                   u'departamento.')
+
     @api.constrains('wage')
     def _check_wage(self):
         for record in self:
             if record.wage <= 0.00:
-                raise ValidationError("The basic salary must be greater than 0.00.")
+                raise ValidationError(_("The basic salary must be greater than 0.00."))
 
 
 

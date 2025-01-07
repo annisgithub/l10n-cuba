@@ -1,12 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
 <odoo>
-    <record id="hr_contract_view_form_inherit" model="ir.ui.view">
-        <field name="name">hr.contract.view.form.inherit</field>
-        <field name="model">hr.contract</field>
-        <field name="inherit_id" ref="hr_contract.hr_contract_view_form"/>
+    <record id="view_form_hr_contract_employee_inherited" model="ir.ui.view">
+        <field name="name">view_hr_contract_employee_form</field>
+        <field name="model">hr.employee</field>
+        <field name="inherit_id" ref="hr.view_employee_form"/>
         <field name="arch" type="xml">
-            <xpath expr="//field[@name='state']" position="after">
-                <div class="oe_button_box" name="button_box">
-                            <button name="action_open_movement_list"
+            <xpath expr="//button[@name='action_open_contract']" position="after">
+                <button name="action_open_movement_list"
                                 class="oe_stat_button"
                                 icon="fa-book"
                                 type="object"
@@ -24,15 +24,11 @@
                                     </span>
                                 </div>
                             </button>
-                        </div>
+
             </xpath>
-            <xpath expr="//button[@name='print_supplier_contract']" position="before">
-                <field name="movements_count_change" invisible="1"/>
-            </xpath>
-            <xpath expr="//button[@name='print_supplier_contract']" position="attributes">
-                <attribute name="invisible">contract_state == 'draft' or (movements_count_change &lt; 0 or movements_count_change == 0)</attribute>
-            </xpath>
-       </field>
+        </field>
     </record>
 
 </odoo>
+
+

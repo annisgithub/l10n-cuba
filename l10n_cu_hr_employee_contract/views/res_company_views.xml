@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="res_company_view_form" model="ir.ui.view">
+            <field name="name">res.company.form.inherit</field>
+            <field name="model">res.company</field>
+            <field name="inherit_id" ref="base.view_company_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//page[@name='branches']" position="after">
+                    <page string="Configuración de reportes" name="reports">
+                        <group>
+                            <group>
+                                <field name="central_office" string="Central Office" required="1"/>
+                                <field name="central_office_abbreviation" string="Central Office Abbreviation" required="1"/>
+                                <field name="business_group" string="Business Group" required="1"/>
+                                <field name="abbreviation_group" string="Abbreviation Group" required="1"/>
+                                <field name="ministry"  string="Ministry" required="1"/>
+                                <field name="ministry_abbreviation" string="Ministry Abbreviation" required="1"/>
+                            </group>
+                            <group>
+                                <field name="job_id" string="Job" required="1"/>
+                                <field name="resolution" string="Resolution" required="1" />
+                                <field name="employer" string="Footer page" required="1"/>
+                                <field name="director" string="Director" required="1"/>
+                                <field name="legal_address" string="Legal Address" required="1"/>
+                            </group>
+
+                        </group>
+                    </page>
+                </xpath>
+                <xpath expr="//field[@name='phone']" position="attributes">
+                    <attribute name="required">1</attribute>
+                </xpath>
+                <xpath expr="//field[@name='email']" position="attributes">
+                    <attribute name="required">1</attribute>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

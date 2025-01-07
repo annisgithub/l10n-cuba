@@ -24,8 +24,8 @@ class DeterminedContractType(models.Model):
         '''
         Valida que el name y code sean únicos
         '''
-        if len(self.search([('name', '=', self.name),
+        if len(self.search([('name', '=ilike', self.name),
                             ('company_id', '=', self.company_id.id),
                             ('id', 'not in', self.ids)])):
-            raise ValidationError(u'El nombre del tipo de contrato debe'
+            raise ValidationError(u'El nombre del tipo de contrato debe '
                                   u'ser único.')

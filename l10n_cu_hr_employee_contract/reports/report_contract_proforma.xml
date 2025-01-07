@@ -4,13 +4,13 @@
         <record id="action_report_contract" model="ir.actions.report">
             <field name="model">hr.contract</field>
             <field name="report_type">qweb-pdf</field>
-            <field name="report_name">l10n_cu_hr_payroll_movement.report_contract_proforma</field>
-            <field name="report_file">l10n_cu_hr_payroll_movement.report_contract_proforma</field>
+            <field name="report_name">l10n_cu_hr_employee_contract.report_contract_proforma</field>
+            <field name="report_file">l10n_cu_hr_employee_contract.report_contract_proforma</field>
             <field name="print_report_name">'Contract proforma'</field>
             <field name="name">Contract proforma</field>
             <field name="binding_model_id" eval="False"/>
             <field name="binding_type">report</field>
-            <field name="paperformat_id" ref="l10n_cu_hr_payroll_movement.paper_format_global"/>
+            <field name="paperformat_id" ref="l10n_cu_hr_employee_contract.paper_contract_format_global"/>
         </record>
         <template id="report_contract_proforma">
             <t t-call="web.html_container">
@@ -30,12 +30,12 @@
                                 <div class="d-flex">
                                     <div class="col-6">
 <!--                                        <img style=" max-width: 250px; height: auto; margin-left:auto"-->
-<!--                                             src="/l10n_cu_hr_payroll_movement/static/description/logo.png" alt=""/>-->
+<!--                                             src="/l10n_cu_hr_employee_contract/static/description/logo.png" alt=""/>-->
                                     </div>
                                     <div class="col-3"/>
                                     <div class="col-3">
 <!--                                        <img style=" max-width: 80px; height: auto; align:end;"-->
-<!--                                             src="/l10n_cu_hr_payroll_movement/static/src/img/logo2.jpg" alt=""/>-->
+<!--                                             src="/l10n_cu_hr_employee_contract/static/src/img/logo2.jpg" alt=""/>-->
                                     </div>
                                 </div>
                                 <div class="text-center">
@@ -49,31 +49,30 @@
                                     <strong>DE UNA PARTE:</strong>
                                     <span class="white-space: nowrap;">La</span>
                                     <strong>
-                                        <t t-esc="doc.central_office"/>
+                                        <t t-esc="doc.company_id.central_office"/>
                                     </strong>
                                     en forma abreviada
                                     <strong>
-                                        <t t-esc="doc.central_office_abbreviation"/>
+                                        <t t-esc="doc.company_id.central_office_abbreviation"/>
                                     </strong>
                                     , subordinada al
-                                    <t t-esc="doc.business_group"/>, en su forma abreviada
-                                    <t t-esc="doc.abbreviation_group"/>
+                                    <t t-esc="doc.company_id.business_group"/>, en su forma abreviada
+                                    <t t-esc="doc.company_id.abbreviation_group"/>
                                     , atendida por el
-                                    <t t-esc="doc.ministry"/>, en su forma abreviada
-                                    <t t-esc="doc.ministry_abbreviation"/>, con domicilio legal en
-                                    <t t-esc="doc.legal_address"/>
+                                    <t t-esc="doc.company_id.ministry"/>, en su forma abreviada
+                                    <t t-esc="doc.company_id.ministry_abbreviation"/>, con domicilio legal en
+                                    <t t-esc="doc.company_id.legal_address"/>
                                     , representada en este acto por
                                     <strong>
-                                        <t t-esc="doc.director"/>
+                                        <t t-esc="doc.company_id.director"/>
                                     </strong>
                                     , en su carácter de Directora de la
                                     <strong>
-                                        <t t-esc="doc.position_id"/>
+                                        <t t-esc="doc.company_id.job_id"/>
                                     </strong>
-                                    , en virtud de la<t t-esc="doc.resolution"/>, de la Directora General de
-                                    TECNOSIME, teléfono:<t t-esc="doc.phone"/>, correo electrónico:
+                                    , en virtud de la<t t-esc="doc.company_id.resolution"/>, de la Directora General, teléfono:<t t-esc="doc.company_id.phone"/>, correo electrónico:
                                     <span class="subrayado">
-                                        <t t-esc="doc.email"/>
+                                        <t t-esc="doc.company_id.email"/>
                                     </span>
                                     quien en lo adelante y a los efectos del presente Contrato se denominará,
                                     <strong>LA EMPLEADORA.</strong>
@@ -82,7 +81,7 @@
                                 <p class="justificado">
                                     <strong>DE OTRA PARTE:</strong>
                                     <span class="border-bottom border-dark d-inline-block mr-2 px-3">
-                                        <t t-esc="doc.employee_id.name"/>
+                                        <t t-esc="doc.employee_id.full_name"/>
                                     </span>
                                     con Carnét de Identidad
                                     <span class="border-bottom border-dark d-inline-block mr-2 px-3">
@@ -377,7 +376,7 @@
                                         <strong>LA EMPLEADORA</strong>
                                         <br/>
                                         <strong>
-                                            <t t-esc="doc.employer"/>
+                                            <t t-esc="doc.company_id.employer"/>
                                         </strong>
                                     </div>
                                     <div class="col-3"/>

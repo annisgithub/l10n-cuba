@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="res_config_settings_view_form" model="ir.ui.view">
+            <field name="name">res.config.settings.view.form.inherit.hr</field>
+            <field name="model">res.config.settings</field>
+            <field name="priority" eval="70"/>
+            <field name="inherit_id" ref="base.res_config_settings_view_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//block[@id='hr_contract']" position="after">
+                    <block title="Configuración de reportes de Proforma y Suplemento del contrato" id="movement">
+                        <setting string="Central Office" id="central_office" title="Central Office">
+                            <field name="central_office"/>
+                        </setting>
+                        <setting string="Business Group" id="business_group" title="Business Group">
+                            <field name="business_group"/>
+                        </setting>
+                        <setting string="Ministry" id="ministry" title="Ministry">
+                            <field name="ministry"/>
+                        </setting>
+                        <setting string="Central Office Abbreviation" id="central_office_abbreviation" title="Central Office Abbreviation">
+                            <field name="central_office_abbreviation"/>
+                        </setting>
+                        <setting string="Abbreviation Group" id="abbreviation_group" title="Abbreviation Group">
+                            <field name="abbreviation_group"/>
+                        </setting>
+                        <setting string="Ministry Abbreviation" id="ministry_abbreviation" title="Ministry Abbreviation">
+                            <field name="ministry_abbreviation"/>
+                        </setting>
+                        <setting string="Legal Address" id="legal_address" title="Legal Address">
+                            <field name="legal_address"/>
+                        </setting>
+                        <setting string="Job" id="job_id" title="Job.">
+                            <field name="job_id"/>
+                        </setting>
+                        <setting string="Resolution" id="resolution" title="Resolution">
+                            <field name="resolution"/>
+                        </setting>
+                        <setting string="Director" id="director" title="Director">
+                            <field name="director"/>
+                        </setting>
+                        <setting string="Phone" id="phone" title="Phone">
+                            <field name="phone"/>
+                        </setting>
+                        <setting string="Email" id="email" title="Email">
+                            <field name="email"/>
+                        </setting>
+                        <setting string="Employer" id="employer" title="Employer">
+                            <field name="employer"/>
+                        </setting>
+
+                    </block>
+                </xpath>
+            </field>
+        </record>
+
+<!--        <record id="hr_config_settings_actions" model="ir.actions.act_window">-->
+<!--            <field name="name">Settings</field>-->
+<!--            <field name="type">ir.actions.act_window</field>-->
+<!--            <field name="res_model">res.config.settings</field>-->
+<!--            <field name="view_mode">form</field>-->
+<!--            <field name="target">inline</field>-->
+<!--            <field name="context">{'module' : 'co_rr_hh', 'bin_size': False}</field>-->
+<!--            <field name="groups_id" eval="[(4, ref('hr_contract.group_hr_contract_manager'))]"/>-->
+<!--        </record>-->
+
+<!--        <menuitem id="hr.hr_menu_configuration" name="Settings" parent="hr.menu_human_resources_configuration"-->
+<!--                  sequence="0" action="hr_config_settings_actions"-->
+<!--                  groups="hr_contract.group_hr_contract_manager"/>-->
+    </data>
+</odoo>
