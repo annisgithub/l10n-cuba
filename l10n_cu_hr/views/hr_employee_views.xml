@@ -5,23 +5,58 @@
         <field name="model">hr.employee</field>
         <field name="inherit_id" ref="hr.view_employee_form"/>
         <field name="arch" type="xml">
+            <xpath expr="//page[@name='personal_information']//div[hasclass('o_address_format')]//field[@name='private_street2']"
+                   position="after">
+                <field name="res_private_municipality_id"
+                       options="{'no_create': True, 'no_edit': True, 'no_quick_create': True}"
+                       placeholder="Municipality..." context="{'state_id': private_state_id, 'default_private_state_id': private_state_id}"/>
+            </xpath>
+
+            <xpath expr="//page[@name='personal_information']/group/group[1]"
+                   position="after">
+                    <group string="Personal Information">
+                        <label for="personal_street" string="Personal Contact"/>
+                        <div class="o_address_format">
+                            <field name="personal_street" placeholder="Street..." class="o_address_street"/>
+                            <field name="personal_street2" placeholder="Street 2..." class="o_address_street"/>
+                            <field name="res_personal_municipality_id"
+                       options="{'no_create': True, 'no_edit': True, 'no_quick_create': True}"
+                       placeholder="Municipality..." context="{'state_id': personal_state_id, 'default_personal_state_id': personal_state_id}"/>
+                            <field name="personal_city" placeholder="City" class="o_address_city"/>
+                            <field name="personal_state_id" class="o_address_state" placeholder="State" options="{'no_open': True, 'no_quick_create': True}" context="{'default_personal_country_id': personal_country_id}"/>
+                            <field name="personal_zip" placeholder="ZIP" class="o_address_zip"/>
+
+                            <field name="personal_country_id" placeholder="Country" class="o_address_country"
+                                   options="{&quot;no_open&quot;: True, &quot;no_create&quot;: True}"/>
+                        </div>
+
+                    </group>
+            </xpath>
+             <xpath expr="//field[@name='country_of_birth']" position="after">
+                  <field name="state_of_birth_id"/>
+                 <field name="municipality_of_birth_id"/>
+             </xpath>
+
             <xpath expr="//sheet/div[contains(@class, 'row justify-content-between position-relative w-100 m-0 mb-2')]/div/h1[contains(@class, 'd-flex flex-row align-items-center')]" position="after">
                     <h2>
                         <field name="last_name" placeholder="First name" required="1"/>
                     </h2>
                     <h2>
-                        <field name="second_last_name" placeholder="Second name"/>
+                        <field name="second_last_name" placeholder="Second name" required="1"/>
                     </h2>
-                </xpath>
+            </xpath>
+            <xpath expr="//field[@name='mobile_phone']" position="before">
+                    <field name="number"  placeholder="Employee Code" required="1"/>
+             </xpath>
             <xpath expr="//field[@name='certificate']" position="after">
-                    <field name="profession_id"/>
+                    <field name="profession_id" required="1"/>
              </xpath>
              <xpath expr="//field[@name='study_school']" position="after">
-                    <field name="schooling_level_id"/>
+                    <field name="schooling_level_id" required="1"/>
              </xpath>
-            <xpath expr="//field[@name='schooling_level_id']" position="after">
-                    <field name="occupational_category_id"/>
-             </xpath>
+<!--            <xpath expr="//field[@name='schooling_level_id']" position="after">-->
+<!--                    <field name="occupational_category_id" required="1"/>-->
+<!--             </xpath>-->
             <xpath expr="//field[@name='identification_id']" position="after">
                     <field name="skin_color"/>
              </xpath>
@@ -33,10 +68,22 @@
                 </page>
 
              </xpath>
+            <xpath expr="//field[@name='department_id']" position="replace">
+                <field name="department_id" required="1"/>
+            </xpath>
+            <xpath expr="//field[@name='job_id']" position="replace">
+                <field name="job_id" required="1"/>
+            </xpath>
+            <xpath expr="//field[@name='identification_id']" position="replace">
+                <field name="identification_id" required="1"
+                       placeholder="Ingrese 11 dígitos"
+                           pattern="^\d{11}$" string="CI"/>
+            </xpath>
+
         </field>
     </record>
     <record id="view_kanban_hr_employee_inherited" model="ir.ui.view">
-        <field name="name">view__hr_employee_kanban</field>
+        <field name="name">view_hr_employee_kanban</field>
         <field name="model">hr.employee</field>
         <field name="inherit_id" ref="hr.hr_kanban_view_employees"/>
         <field name="arch" type="xml">

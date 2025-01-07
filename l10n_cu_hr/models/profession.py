@@ -24,8 +24,8 @@ class Profession(models.Model):
         '''
         Valida que el name y code sean únicos
         '''
-        if len(self.search([('name', '=', self.name),
+        if len(self.search([('name', '=ilike', self.name),
                             ('company_id', '=', self.company_id.id),
                             ('id', 'not in', self.ids)])):
-            raise ValidationError(u'El nombre de la profesión debe'
+            raise ValidationError(u'El nombre de la profesión debe '
                                   u'ser único.')
