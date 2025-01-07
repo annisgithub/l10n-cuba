@@ -26,8 +26,8 @@ class OccupationalCategory(models.Model):
         '''
         Valida que el name y code sean únicos
         '''
-        if len(self.search([('name', '=', self.name),
-                            ('code', '=', self.code),
+        if len(self.search([('name', '=ilike', self.name),
+                            ('code', '=ilike', self.code),
                             ('company_id', '=', self.company_id.id),
                             ('id', 'not in', self.ids)])):
             raise ValidationError(u'El nombre y el código de la categoría ocupacional deben '
